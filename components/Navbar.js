@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center py-10">
+    <div className="flex items-center">
       <div className="w-3/12 ">
         <Logo />
       </div>
