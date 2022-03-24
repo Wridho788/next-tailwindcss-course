@@ -1,16 +1,23 @@
-import React from "react";
+import classnames from "classnames";
 
-const Button = ({ children, addClassName, variant }) => {
+const Button = ({ href, className, variant, children, pill }) => {
   const variants = {
     "outlined-yellow": "border border-yellow-500 text-yellow-500",
     yellow: "bg-yellow-500 text-black",
+    black: "bg-black hover:bg-opacity-90 text-white",
   };
 
   const pickedVariant = variants[variant];
 
   return (
     <a
-      className={`border border-yellow-500 text-yellow-500 py-3 px-10 rounded-full text-lg font-semibold inline-block ${pickedVariant} ${addClassName}`}
+      href={href}
+      className={classnames(
+        "transition py-3 px-10 font-semibold text-lg inline-block",
+        pill && "rounded-full",
+        pickedVariant,
+        className
+      )}
     >
       {children}
     </a>

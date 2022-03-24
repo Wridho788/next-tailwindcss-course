@@ -15,7 +15,7 @@ export default function Hero() {
             Sejak 13 tahun saya memulai programming. Sejak 3 tahun memulai UI
             design.
           </p>
-          <Button addClassName="mt-12" variant="yellow">
+          <Button href="#profile" pill variant="yellow" className="mt-14">
             Pelajari
           </Button>
         </div>
