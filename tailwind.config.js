@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   mode: "jit",
   content: [
@@ -12,7 +13,11 @@ module.exports = {
         mono: ["IBM Plex Mono", "ui-monospace"],
       },
       colors: {
-        primarygray: "#F7F7FB",
+        primarygray: {
+          DEFAULT: "#F7F7FB",
+          200: "#E8E8FB",
+          300: "#BFBFE3",
+        },
         yellow: {
           50: "#FFFDEB",
           100: "#FEFAD7",
@@ -38,11 +43,11 @@ module.exports = {
           "background-image": "url(/hero.png)",
           "background-size": "cover",
           "background-position": "bottom",
-          "background-repeat": "no-repeat"
+          "background-repeat": "no-repeat",
         },
         ".shadow-bg-skill": {
-          "drop-shadow": "0px 15px 30px rgba(0, 0, 0, 0.1)"
-        }
+          "drop-shadow": "0px 15px 30px rgba(0, 0, 0, 0.1)",
+        },
       };
 
       addUtilities(utilities);

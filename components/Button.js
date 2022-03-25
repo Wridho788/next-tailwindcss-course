@@ -2,8 +2,8 @@ import classnames from "classnames";
 
 const Button = ({ href, className, variant, children, pill }) => {
   const variants = {
-    "outlined-yellow": "border border-yellow-500 text-yellow-500",
-    yellow: "bg-yellow-500 text-black",
+    "outline-yellow": `border border-yellow-500 text-yellow-500 hover:text-black hover:bg-yellow-500`,
+    yellow: "bg-yellow-500 hover:bg-yellow-600 text-black",
     black: "bg-black hover:bg-opacity-90 text-white",
   };
 

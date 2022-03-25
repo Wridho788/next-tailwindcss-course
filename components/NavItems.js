@@ -1,7 +1,21 @@
-export default function NavItems({ children }) {
+import classnames from "classnames";
+
+export default function NavItems({ href, scheme, children }) {
+  const schemes = {
+    light: "text-white text-opacity-60 hover:text-opacity-100",
+    dark: "text-black",
+  };
+
+  const pickedScheme = schemes[scheme];
+
   return (
     <li>
-      <a className="text-white text-opacity-60 font-semibold">{children}</a>
+      <a
+        href={href}
+        className={classnames("text-lg transition font-semibold", pickedScheme)}
+      >
+        {children}
+      </a>
     </li>
   );
 }
